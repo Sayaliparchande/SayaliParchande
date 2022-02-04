@@ -1,0 +1,33 @@
+.card-image-top{
+ margin-left: 40%;
+  height: 15rem;
+  width: 15rem;
+  margin-top: 20px;
+}
+.description{
+  height: 50%;
+  width: 50%;
+}
+.about-us__title{
+  margin-left: 60%;
+  margin-top: -20%;
+
+}
+.about-us__description{
+
+  /* display: inline-block; */
+  width: 46%;
+  float: right;
+  /* margin-top: -20%; */
+  padding-bottom:20% ;
+
+
+  /* position: absolute; */
+            /* top: 20rem; */
+
+}
+.aboutus{
+  margin-top: 10%;
+}
+
+

@@ -1,0 +1,20 @@
+.page-footer{
+
+  background-color: rgb(95, 104, 112);
+  color: white ;
+
+  font-family: "BlockBertholdTextured";
+    font-size: 1rem;
+    font-weight: 40;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: .3px;
+    padding: 0 0 2rem;
+    padding-left: 1rem;
+
+}
+.mb-1{
+
+  font-size: x-large;
+}

@@ -1,0 +1,11 @@
+main{
+  width: 100%;
+  display: flex;
+  /* border:10px solid red; */
+  margin: auto;
+  /* background-image: url("src\assets\B.jpg"); */
+  background-size: 100%;
+  /* background-color: seashell; */
+  background-color: #BCBBBB;
+}
+

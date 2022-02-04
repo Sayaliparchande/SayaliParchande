@@ -1,0 +1,41 @@
+.navbar{
+
+  text-transform: uppercase;
+    font-family: "BlockBertholdTextured";
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: .3px;
+    /* color:white; */
+    /* opacity: .4; */
+    padding: 0.5rem 0 0 0.8rem;
+    /* background-color:  #e9d7b3; */
+    background-color: rgb(68, 58, 58);
+}
+li{
+list-style: none;
+
+}
+.logo{
+
+  padding-left: 5%;
+
+
+}
+
+.nav-login{
+
+  color: white;
+
+}
+.nav-cart{
+
+  margin-right: 50px;
+  color: white;
+}
+.form-control{
+
+  width: 25rem;
+}

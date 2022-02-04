@@ -1,0 +1,76 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+      <h3 style="color:white;">Add Product </h3>
+      <button (click)="clickAddProduct()" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product</button>
+  </div>
+</nav>
+<table class="table mt-3">
+  <thead>
+      <th scope="col">product Id</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Image</th>
+      <th scope="col">Action</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let row of productData">
+          <td>{{row.id}}</td>
+          <td>{{row.productName}}</td>
+          <td>{{row.discription}}</td>
+          <td>{{row.price}}</td>
+          <td>{{row.quantity}}</td>
+          <td>{{row.image}}</td>
+          <td >
+              <button (click)="onEdit(row)" class="btn btn-info" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">edit</button>
+              <button (click)="deleteProduct(row)" class="btn btn-danger mx-3">Delete</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Product Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form [formGroup]="formValue">
+              <div class="mb-3">
+                <label for="productName" class="form-label">Product Name</label>
+                <input type="text" formControlName="productName" class="form-control" id="productName" aria-describedby="emailHelp">
+
+              </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" formControlName="discription" class="form-control" id="description">
+              </div>
+              <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <input type="text" formControlName="price" class="form-control" id="price">
+                </div>
+                <div class="mb-3">
+                  <label for="quantity" class="form-label">Quantity</label>
+                  <input type="text" formControlName="quantity" class="form-control" id="quantity">
+                </div>
+                <div class="mb-3">
+                  <label for="image" class="form-label">Image</label>
+                  <input type="text" formControlName="image" class="form-control" id="i+mage">
+                </div>
+
+            </form>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" *ngIf="showAdd" (click)="postProductDetails()" class="btn btn-primary">Add</button>
+        <button type="button" *ngIf="showUpdate" (click)="updateProductDetails()" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<nav class="navbar">
+
+  <a class="logo">
+    <img src="assets/newlogo.png" width="100" height="100" alt="">
+  </a>
+
+  <form class="form-inline my-2 my-lg-0" >
+    <input class="form-control mr-sm-2" type="search"   [(ngModel)]="searchTerm" (keyup)="search($event)"  placeholder="Search" aria-label="Search">
+    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+  </form>
+
+  <a href="login">
+  <li class="nav-login"> <span class="material-icons">
+    person
+  </span>  LOGIN  </li></a>
+
+  <a routerLink="cart">
+  <li class="nav-cart"><span class="material-icons">
+    shopping_cart
+    </span>   CART <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div></li></a>
+
+
+
+</nav>
